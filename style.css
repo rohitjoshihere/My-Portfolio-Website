@@ -1,0 +1,156 @@
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+body {
+    min-height: 100vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background: #DCF2F1;
+}
+
+.typing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    /* background: black; */
+    animation: cursorBlink 0.8s steps(21) infinite;
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    75% {
+        opacity: 1;
+    }
+
+    76%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.typing {
+    position: relative;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #3333);
+}
+
+.container h2 {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.typing h2 {
+    position: relative;
+    color: #365486;
+    letter-spacing: 1px;
+    font-size: 20px;
+    overflow: hidden;
+    margin-bottom: 0;
+    animation: type 5s steps(15) infinite;
+}
+
+@keyframes type {
+
+    0%,
+    100% {
+        width: 0px;
+    }
+
+    30%,
+    60% {
+        width: 200px;
+    }
+}
+
+@media(max-width: 330px) {
+    .typing h2 {
+        font-size: 3rem;
+        animation: type 5s steps(15) infinite;
+    }
+
+    @keyframes type {
+
+        0%,
+        100% {
+            width: 0px;
+        }
+
+        30%,
+        60% {
+            width: 305px;
+        }
+    }
+}
+
+img {
+    height: 200px;
+}
+
+.left-side {
+    /* max-width: 50%; */
+    margin-left: 100px;
+
+}
+
+.right-side {
+    /* display: flex; */
+    /* align-items: center; */
+    /* padding-left: 100px; */
+    /* margin-left: 200px !important; */
+}
+
+ul {
+    list-style-type: none;
+}
+
+.btn {
+    /* background: #7FC7D9; */
+    background-color: #365486 !important;
+
+    /* background-color: #7FC7D9; */
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+
+}
+
+button a {
+    text-decoration: none !important;
+    color: white;
+}
+
+button a:hover {
+    color: white;
+}
+
+@media screen and (max-width: 770px) {
+    .left-side {
+        max-width: 100%;
+        margin-left: 60px;  
+        align-items: center;
+
+    }
+
+    .right-side {
+        align-items: center;
+        margin-top: 50px;
+    }
+}
